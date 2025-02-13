@@ -11,4 +11,9 @@ io.on('connection', (client) => {
         console.log('Message received', payload);
         io.emit('mensaje', {message: 'Hello from the server,now'});
     });
+
+    client.on('emitir-mensaje', (payload) => {
+        console.log('Message received', payload);
+        io.emit('nuevo-mensaje', payload);
+    });
 });
