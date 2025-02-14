@@ -27,6 +27,11 @@
                 console.log('Servidor:', mensaje);
             });
 
+            socket.on('active-bands', function(payload) {
+                console.clear();
+                console.table( payload);
+            });
+
     </script>
 </body>
 </html>
